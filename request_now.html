@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Resource</title>
+    <link rel="stylesheet" href="request_now.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Nexus Logo" class="logo">
+        <h1>Nexus</h1>
+    </header>
+    <main>
+        <section class="resource-header">
+            <h2 id="resource-category">Resource Request</h2>
+            <input type="text" id="location" placeholder="Your Location">
+        </section>
+        <section class="resource-details">
+            <div class="quantity-selection">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1">
+            </div>
+            <div class="additional-info">
+                <label for="additional-info">Additional Information:</label>
+                <textarea id="additional-info" placeholder="Specify any additional details"></textarea>
+            </div>
+            <div class="priority-level">
+                <label for="priority">Priority Level:</label>
+                <select id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+        </section>
+        <section class="submit-section">
+            <button id="submit-btn">Submit Request</button>
+            <div id="confirmation-message"></div>
+        </section>
+    </main>
+    <footer>
+        <button class="footer-btn" id="home" onclick="location.href='home.html'"><i class="fas fa-home"></i></button>
+        <button class="footer-btn" id="requestResources" onclick="location.href='request_resources.html'"><i class="fas fa-hand-holding-heart"></i></button>
+        <button class="footer-btn" id="realTimeMap" onclick="location.href='real_time_map.html'"><i class="fas fa-map-marked-alt"></i></button>
+        <button class="footer-btn" id="chat" onclick="location.href='group_chat.html'"><i class="fas fa-comments"></i></button>
+        <button class="footer-btn" id="more-options-btn"><i class="fas fa-ellipsis-h"></i></button>
+    </footer>
+    <div class="more-options" id="more-options">
+        <ul>
+            <li onclick="location.href='emergency_contact.html'">Emergency Contact</li>
+            <li onclick="location.href='profile.html'">Profile</li>
+        </ul>
+    </div>
+    <div id="popup-screen" class="popup-screen">
+        <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="close-popup-btn">Close</button>
+        </div>
+    </div>
+    <script src="request_now.js"></script>
+</body>
+</html>
